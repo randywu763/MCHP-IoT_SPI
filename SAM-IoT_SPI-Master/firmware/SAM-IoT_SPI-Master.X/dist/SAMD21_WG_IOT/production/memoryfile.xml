@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/SAMD21_WG_IOT/production/SAM-IoT_SPI-Master.X.production.elf">
+    <memory name="program">
+      <units>bytes</units>
+      <length>262144</length>
+      <used>3644</used>
+      <free>258500</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>32768</length>
+      <used>1320</used>
+      <free>31448</free>
+    </memory>
+  </executable>
+</project>
