@@ -377,16 +377,16 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x3638
+.debug_info       0x000000       0x36b0
  *(.debug_info)
- .debug_info      0x000000        0x5cb build/PIC24_IOT_WG/production/mcc_generated_files/interrupt_manager.o
- .debug_info      0x0005cb        0x340 build/PIC24_IOT_WG/production/mcc_generated_files/system.o
- .debug_info      0x00090b        0x423 build/PIC24_IOT_WG/production/mcc_generated_files/traps.o
- .debug_info      0x000d2e        0x913 build/PIC24_IOT_WG/production/mcc_generated_files/spi2.o
- .debug_info      0x001641        0x368 build/PIC24_IOT_WG/production/mcc_generated_files/clock.o
- .debug_info      0x0019a9        0xc57 build/PIC24_IOT_WG/production/mcc_generated_files/pin_manager.o
- .debug_info      0x002600        0x9a3 build/PIC24_IOT_WG/production/mcc_generated_files/tmr1.o
- .debug_info      0x002fa3        0x695 build/PIC24_IOT_WG/production/main.o
+ .debug_info      0x000000        0x5da build/PIC24_IOT_WG/production/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x0005da        0x34f build/PIC24_IOT_WG/production/mcc_generated_files/system.o
+ .debug_info      0x000929        0x432 build/PIC24_IOT_WG/production/mcc_generated_files/traps.o
+ .debug_info      0x000d5b        0x922 build/PIC24_IOT_WG/production/mcc_generated_files/spi2.o
+ .debug_info      0x00167d        0x377 build/PIC24_IOT_WG/production/mcc_generated_files/clock.o
+ .debug_info      0x0019f4        0xc66 build/PIC24_IOT_WG/production/mcc_generated_files/pin_manager.o
+ .debug_info      0x00265a        0x9b2 build/PIC24_IOT_WG/production/mcc_generated_files/tmr1.o
+ .debug_info      0x00300c        0x6a4 build/PIC24_IOT_WG/production/main.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x802
