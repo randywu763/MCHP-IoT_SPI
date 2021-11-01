@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project>
-  <executable name="dist/PIC24_IOT_WG/production/PIC-IoT_SPI-Master.X.production.elf">
+  <executable name="dist/PIC24_IOT_WG/debug/PIC-IoT_SPI-Master.X.debug.elf">
     <memory name="data">
       <units>bytes</units>
       <length>16384</length>
-      <used>3648</used>
-      <free>12736</free>
+      <used>2712</used>
+      <free>13672</free>
     </memory>
     <memory name="program">
       <units>bytes</units>
       <length>134400</length>
-      <used>4383</used>
-      <free>130017</free>
+      <used>4410</used>
+      <free>129990</free>
     </memory>
   </executable>
 </project>

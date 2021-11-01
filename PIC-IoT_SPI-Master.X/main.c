@@ -138,7 +138,7 @@ int main(void)
         // Add your application code
         if (SW0_buttonPressed == true)
         {
-            while (APP_dataFramesSent < DATAFRAMES_TOTAL2SEND)
+            while (APP_dataFramesSent < DATAFRAMES_TOTAL2SEND_SW0)
             {
                 if (isTMR1TimerExpired == true)
                 {
@@ -155,6 +155,26 @@ int main(void)
             }
             APP_dataFramesSent = 0;
             SW0_buttonPressed = false;
+        }
+        if (SW1_buttonPressed == true)
+        {
+            while (APP_dataFramesSent < DATAFRAMES_TOTAL2SEND_SW1)
+            {
+                if (isTMR1TimerExpired == true)
+                {
+                    isTMR1TimerExpired = false;
+                    APP_sendDataFrame();
+                    APP_dataFramesSent++;
+                    APP_dataFrameIndex++;
+                    if (APP_dataFrameIndex > CMD_STR_INDEX_MAX)
+                    {
+                        APP_dataFrameIndex = CMD_STR_INDEX_MIN;    
+                    }
+                    LED_RED_Toggle();
+                }
+            }
+            APP_dataFramesSent = 0;
+            SW1_buttonPressed = false;
         }
     }
 
