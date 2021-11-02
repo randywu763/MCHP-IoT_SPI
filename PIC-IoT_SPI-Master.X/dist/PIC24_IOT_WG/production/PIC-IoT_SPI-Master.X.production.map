@@ -61,8 +61,6 @@ Archive member included because of file (symbol)
                               /Applications/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o) (__data_init_da)
 /Applications/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt_start_mode_normalda.Leo)
                               (__crt_start_mode_normal)
-/Applications/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a(memcpy.DA_eo)
-                              build/PIC24_IOT_WG/production/main.o (_memcpy)
 
 
 Selected CodeGuard Options:
@@ -96,11 +94,12 @@ Default Scalar Model: Small
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x100               0x258           0x384  (900)
-.dinit                       0x358               0x440           0x660  (1632)
-.text                        0x798               0x4d2           0x73b  (1851)
+.text                        0x100               0x24a           0x36f  (879)
+.text                        0x34a               0x4a0           0x6f0  (1776)
+.dinit                       0x7ea                0x38            0x54  (84)
+.text                        0x822                0x42            0x63  (99)
 
-                 Total "program" memory used (bytes):         0x111f  (4383) 3%
+                 Total "program" memory used (bytes):          0xb16  (2838) 2%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -112,11 +111,9 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                        0x80c                   0             0x4  (4)
 .ndata                       0x810                   0             0x2  (2)
 .nbss                        0x812                   0             0x2  (2)
-.bss                         0x814                   0           0x808  (2056)
-.data                       0x101c                   0           0x602  (1538)
-.bss                        0x161e                   0            0x22  (34)
+.bss                         0x814                   0           0x82a  (2090)
 
-                 Total "data" memory used (bytes):          0xe40  (3648) 22%
+                 Total "data" memory used (bytes):          0x83e  (2110) 12%
 
 
 Dynamic Memory Usage
@@ -124,9 +121,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                       0x1640                              0x31c0  (12736)
+stack                       0x103e                              0x37c2  (14274)
 
-                 Maximum dynamic memory (bytes):         0x31c0  (12736)
+                 Maximum dynamic memory (bytes):         0x37c2  (14274)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -169,71 +166,70 @@ External Symbols in Program Memory (by address):
                   0x0002be                  __IOCInterrupt
                   0x00030e                  __T1Interrupt
                   0x000344                  __DefaultInterrupt
-                  0x00034a                  _memcpy
-                  0x000798                  _SPI2_Initialize
-                  0x0007b4                  _SPI2_Exchange
-                  0x0007e4                  _SPI2_ExchangeBuffer
-                  0x0008ae                  _SPI2_Exchange8bit
-                  0x0008be                  _SPI2_Exchange8bitBuffer
-                  0x0008d2                  _SPI2_TransferModeGet
-                  0x0008f6                  _SPI2_StatusGet
-                  0x0008fe                  _APP_prepareDataFrame
-                  0x000924                  _APP_sendDataFrame
-                  0x00094a                  build/PIC24_IOT_WG/production/main.o:_SW0_interruptHandler
-                  0x000954                  build/PIC24_IOT_WG/production/main.o:_SW1_interruptHandler
-                  0x00095e                  build/PIC24_IOT_WG/production/main.o:_TMR1_interruptHandler
-                  0x000998                  _main
-                  0x000a48                  _PIN_MANAGER_Initialize
-                  0x000af2                  _BUTTON_SW0_SetInterruptHandler
-                  0x000b02                  _BUTTON_SW0_SetIOCInterruptHandler
-                  0x000b0e                  _BUTTON_SW1_SetInterruptHandler
-                  0x000b1e                  _BUTTON_SW1_SetIOCInterruptHandler
-                  0x000b2a                  _TMR1_Initialize
-                  0x000b4e                  _TMR1_Period16BitSet
-                  0x000b60                  _TMR1_Period16BitGet
-                  0x000b68                  _TMR1_Counter16BitSet
-                  0x000b7a                  _TMR1_Counter16BitGet
-                  0x000b88                  _TMR1_SetInterruptHandler
-                  0x000b98                  _TMR1_Start
-                  0x000ba8                  _TMR1_Stop
-                  0x000bb2                  _TMR1_GetElapsedThenClear
-                  0x000bca                  _TMR1_SoftwareCounterGet
-                  0x000bd6                  _TMR1_SoftwareCounterClear
-                  0x000be2                  _CLOCK_Initialize
-                  0x000c28                  _INTERRUPT_Initialize
-                  0x000c5a                  _SYSTEM_Initialize
+                  0x00034a                  _SPI2_Initialize
+                  0x000366                  _SPI2_Exchange
+                  0x000396                  _SPI2_ExchangeBuffer
+                  0x000460                  _SPI2_Exchange8bit
+                  0x000470                  _SPI2_Exchange8bitBuffer
+                  0x000484                  _SPI2_TransferModeGet
+                  0x0004a8                  _SPI2_StatusGet
+                  0x0004b0                  _APP_prepareDataFrame
+                  0x0004e6                  _APP_sendDataFrame
+                  0x00050c                  build/PIC24_IOT_WG/production/main.o:_SW0_interruptHandler
+                  0x000516                  build/PIC24_IOT_WG/production/main.o:_SW1_interruptHandler
+                  0x000520                  build/PIC24_IOT_WG/production/main.o:_TMR1_interruptHandler
+                  0x00055a                  _main
+                  0x00060a                  _PIN_MANAGER_Initialize
+                  0x0006b4                  _BUTTON_SW0_SetInterruptHandler
+                  0x0006c4                  _BUTTON_SW0_SetIOCInterruptHandler
+                  0x0006d0                  _BUTTON_SW1_SetInterruptHandler
+                  0x0006e0                  _BUTTON_SW1_SetIOCInterruptHandler
+                  0x0006ec                  _TMR1_Initialize
+                  0x000710                  _TMR1_Period16BitSet
+                  0x000722                  _TMR1_Period16BitGet
+                  0x00072a                  _TMR1_Counter16BitSet
+                  0x00073c                  _TMR1_Counter16BitGet
+                  0x00074a                  _TMR1_SetInterruptHandler
+                  0x00075a                  _TMR1_Start
+                  0x00076a                  _TMR1_Stop
+                  0x000774                  _TMR1_GetElapsedThenClear
+                  0x00078c                  _TMR1_SoftwareCounterGet
+                  0x000798                  _TMR1_SoftwareCounterClear
+                  0x0007a4                  _CLOCK_Initialize
+                  0x000822                  _INTERRUPT_Initialize
+                  0x000854                  _SYSTEM_Initialize
                   0x015f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0008fe                  _APP_prepareDataFrame
-                  0x000924                  _APP_sendDataFrame
-                  0x000b02                  _BUTTON_SW0_SetIOCInterruptHandler
-                  0x000af2                  _BUTTON_SW0_SetInterruptHandler
-                  0x000b1e                  _BUTTON_SW1_SetIOCInterruptHandler
-                  0x000b0e                  _BUTTON_SW1_SetInterruptHandler
-                  0x000be2                  _CLOCK_Initialize
-                  0x000c28                  _INTERRUPT_Initialize
-                  0x000a48                  _PIN_MANAGER_Initialize
-                  0x0007b4                  _SPI2_Exchange
-                  0x0008ae                  _SPI2_Exchange8bit
-                  0x0008be                  _SPI2_Exchange8bitBuffer
-                  0x0007e4                  _SPI2_ExchangeBuffer
-                  0x000798                  _SPI2_Initialize
-                  0x0008f6                  _SPI2_StatusGet
-                  0x0008d2                  _SPI2_TransferModeGet
-                  0x000c5a                  _SYSTEM_Initialize
-                  0x000b7a                  _TMR1_Counter16BitGet
-                  0x000b68                  _TMR1_Counter16BitSet
-                  0x000bb2                  _TMR1_GetElapsedThenClear
-                  0x000b2a                  _TMR1_Initialize
-                  0x000b60                  _TMR1_Period16BitGet
-                  0x000b4e                  _TMR1_Period16BitSet
-                  0x000b88                  _TMR1_SetInterruptHandler
-                  0x000bd6                  _TMR1_SoftwareCounterClear
-                  0x000bca                  _TMR1_SoftwareCounterGet
-                  0x000b98                  _TMR1_Start
-                  0x000ba8                  _TMR1_Stop
+                  0x0004b0                  _APP_prepareDataFrame
+                  0x0004e6                  _APP_sendDataFrame
+                  0x0006c4                  _BUTTON_SW0_SetIOCInterruptHandler
+                  0x0006b4                  _BUTTON_SW0_SetInterruptHandler
+                  0x0006e0                  _BUTTON_SW1_SetIOCInterruptHandler
+                  0x0006d0                  _BUTTON_SW1_SetInterruptHandler
+                  0x0007a4                  _CLOCK_Initialize
+                  0x000822                  _INTERRUPT_Initialize
+                  0x00060a                  _PIN_MANAGER_Initialize
+                  0x000366                  _SPI2_Exchange
+                  0x000460                  _SPI2_Exchange8bit
+                  0x000470                  _SPI2_Exchange8bitBuffer
+                  0x000396                  _SPI2_ExchangeBuffer
+                  0x00034a                  _SPI2_Initialize
+                  0x0004a8                  _SPI2_StatusGet
+                  0x000484                  _SPI2_TransferModeGet
+                  0x000854                  _SYSTEM_Initialize
+                  0x00073c                  _TMR1_Counter16BitGet
+                  0x00072a                  _TMR1_Counter16BitSet
+                  0x000774                  _TMR1_GetElapsedThenClear
+                  0x0006ec                  _TMR1_Initialize
+                  0x000722                  _TMR1_Period16BitGet
+                  0x000710                  _TMR1_Period16BitSet
+                  0x00074a                  _TMR1_SetInterruptHandler
+                  0x000798                  _TMR1_SoftwareCounterClear
+                  0x00078c                  _TMR1_SoftwareCounterGet
+                  0x00075a                  _TMR1_Start
+                  0x00076a                  _TMR1_Stop
                   0x00025e                  __AddressError
                   0x000344                  __DefaultInterrupt
                   0x015f00                  __FSEC.sec
@@ -247,11 +243,10 @@ External Symbols in Program Memory (by name):
                   0x000152                  __data_init_da
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x000998                  _main
-                  0x00034a                  _memcpy
-                  0x00094a                  build/PIC24_IOT_WG/production/main.o:_SW0_interruptHandler
-                  0x000954                  build/PIC24_IOT_WG/production/main.o:_SW1_interruptHandler
-                  0x00095e                  build/PIC24_IOT_WG/production/main.o:_TMR1_interruptHandler
+                  0x00055a                  _main
+                  0x00050c                  build/PIC24_IOT_WG/production/main.o:_SW0_interruptHandler
+                  0x000516                  build/PIC24_IOT_WG/production/main.o:_SW1_interruptHandler
+                  0x000520                  build/PIC24_IOT_WG/production/main.o:_TMR1_interruptHandler
 
 Memory Configuration
 
@@ -306,7 +301,7 @@ LOAD /Applications/microchip/xc16/v1.70/bin/bin/../../lib/libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000100        0x258
+.text             0x000100        0x24a
  *(.init)
  .init            0x000100         0x4c /Applications/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
                   0x000100                  __reset
@@ -339,8 +334,6 @@ LOAD /Applications/microchip/xc16/v1.70/bin/bin/../../lib/libfx-elf.a
                   0x000348          0x2 /Applications/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt_start_mode_normalda.Leo)
                   0x000348                  __crt_start_mode_normal
                   0x000348                  __crt_start_mode
- .libc.memcpy     0x00034a          0xe /Applications/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a(memcpy.DA_eo)
-                  0x00034a                  _memcpy
 
 usercode
  *(usercode)
@@ -377,7 +370,7 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x36b0
+.debug_info       0x000000       0x3657
  *(.debug_info)
  .debug_info      0x000000        0x5da build/PIC24_IOT_WG/production/mcc_generated_files/interrupt_manager.o
  .debug_info      0x0005da        0x34f build/PIC24_IOT_WG/production/mcc_generated_files/system.o
@@ -386,7 +379,7 @@ __FDEVOPT1
  .debug_info      0x00167d        0x377 build/PIC24_IOT_WG/production/mcc_generated_files/clock.o
  .debug_info      0x0019f4        0xc66 build/PIC24_IOT_WG/production/mcc_generated_files/pin_manager.o
  .debug_info      0x00265a        0x9b2 build/PIC24_IOT_WG/production/mcc_generated_files/tmr1.o
- .debug_info      0x00300c        0x6a4 build/PIC24_IOT_WG/production/main.o
+ .debug_info      0x00300c        0x64b build/PIC24_IOT_WG/production/main.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x802
@@ -1936,7 +1929,7 @@ LOAD data_init
                   0x000456         0x7b build/PIC24_IOT_WG/production/main.o
 
 __c30_signature
-                  0x0004d1         0x48
+                  0x0004d1         0x42
  __c30_signature
                   0x0004d1          0x6 build/PIC24_IOT_WG/production/mcc_generated_files/interrupt_manager.o
  __c30_signature
@@ -1959,8 +1952,6 @@ __c30_signature
                   0x000507          0x6 /Applications/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(crt0_extended24.o)
  __c30_signature
                   0x00050d          0x6 /Applications/microchip/xc16/v1.70/bin/bin/../../lib/liblega-pic30-elf.a(data_init_24.o)
- __c30_signature
-                  0x000513          0x6 /Applications/microchip/xc16/v1.70/bin/bin/../../lib/liblega-c-elf.a(memcpy.DA_eo)
 
 .nbss               0x0800          0x6
  .nbss              0x0800          0x6 build/PIC24_IOT_WG/production/main.o
@@ -1984,17 +1975,12 @@ __c30_signature
  .nbss              0x0812          0x2 build/PIC24_IOT_WG/production/mcc_generated_files/tmr1.o
                     0x0812                  _TMR1_InterruptHandler
 
-.bss                0x0814        0x808
+.bss                0x0814        0x82a
  .bss               0x0814        0x808 build/PIC24_IOT_WG/production/main.o
                     0x0814                  _APP_txBuffer
                     0x0c18                  _APP_rxBuffer
-
-.data               0x101c        0x602
- .data              0x101c        0x602 build/PIC24_IOT_WG/production/main.o
-
-.bss                0x161e         0x22
- .bss               0x161e         0x20 build/PIC24_IOT_WG/production/mcc_generated_files/traps.o
- .bss               0x163e          0x2 build/PIC24_IOT_WG/production/mcc_generated_files/tmr1.o
+ .bss               0x101c         0x20 build/PIC24_IOT_WG/production/mcc_generated_files/traps.o
+ .bss               0x103c          0x2 build/PIC24_IOT_WG/production/mcc_generated_files/tmr1.o
 
 .config_ALTI2C1
                   0x015f2c          0x2
@@ -2056,51 +2042,53 @@ __c30_signature
  .ivt._T1Interrupt
                   0x00001a          0x2 build/PIC24_IOT_WG/production/mcc_generated_files/tmr1.o
 
-.dinit            0x000358        0x440
- .dinit           0x000358        0x440 data_init
+.text             0x00034a        0x4a0
+ .text            0x00034a        0x166 build/PIC24_IOT_WG/production/mcc_generated_files/spi2.o
+                  0x00034a                  _SPI2_Initialize
+                  0x000366                  _SPI2_Exchange
+                  0x000396                  _SPI2_ExchangeBuffer
+                  0x000460                  _SPI2_Exchange8bit
+                  0x000470                  _SPI2_Exchange8bitBuffer
+                  0x000484                  _SPI2_TransferModeGet
+                  0x0004a8                  _SPI2_StatusGet
+ .text            0x0004b0        0x15a build/PIC24_IOT_WG/production/main.o
+                  0x0004b0                  _APP_prepareDataFrame
+                  0x0004e6                  _APP_sendDataFrame
+                  0x00050c                  build/PIC24_IOT_WG/production/main.o:_SW0_interruptHandler
+                  0x000516                  build/PIC24_IOT_WG/production/main.o:_SW1_interruptHandler
+                  0x000520                  build/PIC24_IOT_WG/production/main.o:_TMR1_interruptHandler
+                  0x00055a                  _main
+ .text            0x00060a         0xe2 build/PIC24_IOT_WG/production/mcc_generated_files/pin_manager.o
+                  0x00060a                  _PIN_MANAGER_Initialize
+                  0x0006a8                  _BUTTON_SW0_CallBack
+                  0x0006ae                  _BUTTON_SW1_CallBack
+                  0x0006b4                  _BUTTON_SW0_SetInterruptHandler
+                  0x0006c4                  _BUTTON_SW0_SetIOCInterruptHandler
+                  0x0006d0                  _BUTTON_SW1_SetInterruptHandler
+                  0x0006e0                  _BUTTON_SW1_SetIOCInterruptHandler
+ .text            0x0006ec         0xb8 build/PIC24_IOT_WG/production/mcc_generated_files/tmr1.o
+                  0x0006ec                  _TMR1_Initialize
+                  0x000710                  _TMR1_Period16BitSet
+                  0x000722                  _TMR1_Period16BitGet
+                  0x00072a                  _TMR1_Counter16BitSet
+                  0x00073c                  _TMR1_Counter16BitGet
+                  0x000744                  _TMR1_CallBack
+                  0x00074a                  _TMR1_SetInterruptHandler
+                  0x00075a                  _TMR1_Start
+                  0x00076a                  _TMR1_Stop
+                  0x000774                  _TMR1_GetElapsedThenClear
+                  0x00078c                  _TMR1_SoftwareCounterGet
+                  0x000798                  _TMR1_SoftwareCounterClear
+ .text            0x0007a4         0x46 build/PIC24_IOT_WG/production/mcc_generated_files/clock.o
+                  0x0007a4                  _CLOCK_Initialize
 
-.text             0x000798        0x4d2
- .text            0x000798        0x166 build/PIC24_IOT_WG/production/mcc_generated_files/spi2.o
-                  0x000798                  _SPI2_Initialize
-                  0x0007b4                  _SPI2_Exchange
-                  0x0007e4                  _SPI2_ExchangeBuffer
-                  0x0008ae                  _SPI2_Exchange8bit
-                  0x0008be                  _SPI2_Exchange8bitBuffer
-                  0x0008d2                  _SPI2_TransferModeGet
-                  0x0008f6                  _SPI2_StatusGet
- .text            0x0008fe        0x14a build/PIC24_IOT_WG/production/main.o
-                  0x0008fe                  _APP_prepareDataFrame
-                  0x000924                  _APP_sendDataFrame
-                  0x00094a                  build/PIC24_IOT_WG/production/main.o:_SW0_interruptHandler
-                  0x000954                  build/PIC24_IOT_WG/production/main.o:_SW1_interruptHandler
-                  0x00095e                  build/PIC24_IOT_WG/production/main.o:_TMR1_interruptHandler
-                  0x000998                  _main
- .text            0x000a48         0xe2 build/PIC24_IOT_WG/production/mcc_generated_files/pin_manager.o
-                  0x000a48                  _PIN_MANAGER_Initialize
-                  0x000ae6                  _BUTTON_SW0_CallBack
-                  0x000aec                  _BUTTON_SW1_CallBack
-                  0x000af2                  _BUTTON_SW0_SetInterruptHandler
-                  0x000b02                  _BUTTON_SW0_SetIOCInterruptHandler
-                  0x000b0e                  _BUTTON_SW1_SetInterruptHandler
-                  0x000b1e                  _BUTTON_SW1_SetIOCInterruptHandler
- .text            0x000b2a         0xb8 build/PIC24_IOT_WG/production/mcc_generated_files/tmr1.o
-                  0x000b2a                  _TMR1_Initialize
-                  0x000b4e                  _TMR1_Period16BitSet
-                  0x000b60                  _TMR1_Period16BitGet
-                  0x000b68                  _TMR1_Counter16BitSet
-                  0x000b7a                  _TMR1_Counter16BitGet
-                  0x000b82                  _TMR1_CallBack
-                  0x000b88                  _TMR1_SetInterruptHandler
-                  0x000b98                  _TMR1_Start
-                  0x000ba8                  _TMR1_Stop
-                  0x000bb2                  _TMR1_GetElapsedThenClear
-                  0x000bca                  _TMR1_SoftwareCounterGet
-                  0x000bd6                  _TMR1_SoftwareCounterClear
- .text            0x000be2         0x46 build/PIC24_IOT_WG/production/mcc_generated_files/clock.o
-                  0x000be2                  _CLOCK_Initialize
- .text            0x000c28         0x1a build/PIC24_IOT_WG/production/mcc_generated_files/interrupt_manager.o
-                  0x000c28                  _INTERRUPT_Initialize
- .text            0x000c42         0x18 build/PIC24_IOT_WG/production/mcc_generated_files/traps.o
-                  0x000c42                  _TRAPS_halt_on_error
- .text            0x000c5a         0x10 build/PIC24_IOT_WG/production/mcc_generated_files/system.o
-                  0x000c5a                  _SYSTEM_Initialize
+.dinit            0x0007ea         0x38
+ .dinit           0x0007ea         0x38 data_init
+
+.text             0x000822         0x42
+ .text            0x000822         0x1a build/PIC24_IOT_WG/production/mcc_generated_files/interrupt_manager.o
+                  0x000822                  _INTERRUPT_Initialize
+ .text            0x00083c         0x18 build/PIC24_IOT_WG/production/mcc_generated_files/traps.o
+                  0x00083c                  _TRAPS_halt_on_error
+ .text            0x000854         0x10 build/PIC24_IOT_WG/production/mcc_generated_files/system.o
+                  0x000854                  _SYSTEM_Initialize

@@ -57,30 +57,17 @@ size_t   APP_rxBufSize = RXBUFF_NUMBYTES;
 uint8_t  APP_dataFrameIndex = CMD_STR_INDEX_MIN;
 uint16_t APP_dataFramesSent = 0;
 
-static char APP_telemetry_512b[] =
-"\"start--$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef$--end\"";
-
-static char APP_telemetry_1024b[] =
-"\"start--$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef$--end\"";
-
 void APP_prepareDataFrame(uint8_t index)
 {
+    uint16_t counter;
+    
     APP_txBuffer[0] = 't';
     APP_txBuffer[1] = index;
     APP_txBuffer[2] = ((PAYLOAD_NUMBYTES >> 8) & 0x00FF);
-    APP_txBuffer[3] = (PAYLOAD_NUMBYTES & 0x00FF);
-    //memcpy(&APP_txBuffer[HEADER_NUMBYTES], APP_telemetry_512b, sizeof(APP_telemetry_512b));
-    memcpy(&APP_txBuffer[HEADER_NUMBYTES], APP_telemetry_1024b, sizeof(APP_telemetry_1024b));
+    for (counter = HEADER_NUMBYTES; counter < (HEADER_NUMBYTES+PAYLOAD_NUMBYTES); counter++)
+    {
+        APP_txBuffer[counter] = index + 38;
+    }
 }
 
 void APP_sendDataFrame(void)
