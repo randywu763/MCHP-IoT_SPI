@@ -7457,7 +7457,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPI2" name="ClockFrequency"/>
-         <value>2000000.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</value>
+         <value>30769.23076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076923076924</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPI2" name="DataModeSelect"/>
@@ -7893,7 +7893,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="SPI2" registerAlias="SPIBRGL"/>
-         <value>0</value>
+         <value>64</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="SPI2" registerAlias="SPIBUFH"/>
@@ -7937,7 +7937,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="SPI2" registerAlias="SPIBRGL" settingAlias="SPIBRGL"/>
-         <value>0</value>
+         <value>64</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="SPI2" registerAlias="SPIBUFH" settingAlias="SPIBUFH"/>
@@ -9063,7 +9063,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/spi2.c</file>
-         <hash>5e692c4bd7944f5e8dbfb3ba1322330c8a3de67c1a5e86e2b1efd863764bb1e3</hash>
+         <hash>6f6d1266a96397c9bf17e4f011af6834d734e8ffe9b40b319bfa99cfad2f158c</hash>
       </entry>
       <entry>
          <file>main.c</file>
@@ -9071,35 +9071,35 @@
       </entry>
       <entry>
          <file>mcc_generated_files/system.c</file>
-         <hash>0fcbad27f4714f4f14e49987659b492f507c9b431ad50e8362c66a8b6b2b8577</hash>
+         <hash>0d2d4114ebd9649e99caed8e75414e89d39594bd2ccfc36bd0d5776cf61e7325</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr1.h</file>
          <hash>097f83a9e33e86c9ef4b7e018b1163b867321b3ac8d0c8b6f162294eae9b145a</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/clock.h</file>
-         <hash>071547d2da5a4e62997208e3542c9233a7be898b316cc46f7c11c3da55e75471</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/traps.h</file>
          <hash>e88b894cd0c30e0f6833e528fab13133557526c5463058401cd013d1501acfd2</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/clock.h</file>
+         <hash>071547d2da5a4e62997208e3542c9233a7be898b316cc46f7c11c3da55e75471</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/spi2.h</file>
          <hash>284003566586ca2ce34aacbb77fc4043fd638efefc1abf7cfcbeb52285569180</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/clock.c</file>
-         <hash>8241a109c876bac5750d64ecce69b90f5dc2da23bbe1ba1df0d57194820ff177</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/traps.c</file>
          <hash>7803e0cc23137f0c91cca7378c6a6085fa5a5fe86a1180881c953dc4e873c60a</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files/clock.c</file>
+         <hash>8241a109c876bac5750d64ecce69b90f5dc2da23bbe1ba1df0d57194820ff177</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files/mcc.h</file>
-         <hash>df90b20e0e9d454de6929e4340a9fb09051984c447cf0cf86f4b2fe5e15bcf42</hash>
+         <hash>eccb41e75e97f6f66111eaf89b9b8e7bd15bbc34f086bfa8e18cca1d975ae505</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/system.h</file>
@@ -9115,7 +9115,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/pin_manager.c</file>
-         <hash>458449278d495d6aa388b27c3bd77f03a7cedb6cfa8ae8d002b928494b44b91f</hash>
+         <hash>54eb1fe22e7d9a7ba1884d4b4b49d8615c8335cc39950cdf25f648226c571c4b</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

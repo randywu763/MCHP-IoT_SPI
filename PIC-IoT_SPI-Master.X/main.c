@@ -68,6 +68,14 @@ void APP_prepareDataFrame(uint8_t index)
     {
         APP_txBuffer[counter] = index + 38;
     }
+    APP_txBuffer[HEADER_NUMBYTES+0] = 'S';
+    APP_txBuffer[HEADER_NUMBYTES+1] = 'T';
+    APP_txBuffer[HEADER_NUMBYTES+2] = 'A';
+    APP_txBuffer[HEADER_NUMBYTES+3] = 'R';
+    APP_txBuffer[HEADER_NUMBYTES+4] = 'T';
+    APP_txBuffer[TXBUFF_NUMBYTES-3] = 'E';
+    APP_txBuffer[TXBUFF_NUMBYTES-2] = 'N';
+    APP_txBuffer[TXBUFF_NUMBYTES-1] = 'D';    
 }
 
 void APP_sendDataFrame(void)
