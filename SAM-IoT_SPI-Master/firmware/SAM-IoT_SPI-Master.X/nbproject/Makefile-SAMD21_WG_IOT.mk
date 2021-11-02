@@ -110,182 +110,182 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1427407075/plib_clock.o: ../src/config/SAMD21_WG_IOT/peripheral/clock/plib_clock.c  .generated_files/flags/SAMD21_WG_IOT/3183973b1d4794e606c40ec2fea5c84536a1af25 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1427407075/plib_clock.o: ../src/config/SAMD21_WG_IOT/peripheral/clock/plib_clock.c  .generated_files/flags/SAMD21_WG_IOT/30e493381fb3643877a8b1306d35c3850942cd6a .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1427407075" 
 	@${RM} ${OBJECTDIR}/_ext/1427407075/plib_clock.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1427407075/plib_clock.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1427407075/plib_clock.o.d" -o ${OBJECTDIR}/_ext/1427407075/plib_clock.o ../src/config/SAMD21_WG_IOT/peripheral/clock/plib_clock.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/485663148/plib_eic.o: ../src/config/SAMD21_WG_IOT/peripheral/eic/plib_eic.c  .generated_files/flags/SAMD21_WG_IOT/664b712a02ac4342903f2b8448b4afe45e8af408 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/485663148/plib_eic.o: ../src/config/SAMD21_WG_IOT/peripheral/eic/plib_eic.c  .generated_files/flags/SAMD21_WG_IOT/e46d62b379bdccbcd82d7091f9297ef3245ca8f5 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/485663148" 
 	@${RM} ${OBJECTDIR}/_ext/485663148/plib_eic.o.d 
 	@${RM} ${OBJECTDIR}/_ext/485663148/plib_eic.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/485663148/plib_eic.o.d" -o ${OBJECTDIR}/_ext/485663148/plib_eic.o ../src/config/SAMD21_WG_IOT/peripheral/eic/plib_eic.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1429556561/plib_evsys.o: ../src/config/SAMD21_WG_IOT/peripheral/evsys/plib_evsys.c  .generated_files/flags/SAMD21_WG_IOT/bf128e01e247f3739bc0ba8f1fd18c5204d239b8 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1429556561/plib_evsys.o: ../src/config/SAMD21_WG_IOT/peripheral/evsys/plib_evsys.c  .generated_files/flags/SAMD21_WG_IOT/ae2b16617e39fdc58a6a38b4b440a3b5cd8a085f .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1429556561" 
 	@${RM} ${OBJECTDIR}/_ext/1429556561/plib_evsys.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1429556561/plib_evsys.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1429556561/plib_evsys.o.d" -o ${OBJECTDIR}/_ext/1429556561/plib_evsys.o ../src/config/SAMD21_WG_IOT/peripheral/evsys/plib_evsys.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/2124592493/plib_nvic.o: ../src/config/SAMD21_WG_IOT/peripheral/nvic/plib_nvic.c  .generated_files/flags/SAMD21_WG_IOT/141d132ed8e7cb92b2fd04ebddfeba82ecb3eda6 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/2124592493/plib_nvic.o: ../src/config/SAMD21_WG_IOT/peripheral/nvic/plib_nvic.c  .generated_files/flags/SAMD21_WG_IOT/de20ed13a273b0224fea1a5a79106ba605da52e9 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/2124592493" 
 	@${RM} ${OBJECTDIR}/_ext/2124592493/plib_nvic.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2124592493/plib_nvic.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/2124592493/plib_nvic.o.d" -o ${OBJECTDIR}/_ext/2124592493/plib_nvic.o ../src/config/SAMD21_WG_IOT/peripheral/nvic/plib_nvic.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o: ../src/config/SAMD21_WG_IOT/peripheral/nvmctrl/plib_nvmctrl.c  .generated_files/flags/SAMD21_WG_IOT/e23d86c098811e7d7759e6deabffccc4063584d0 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o: ../src/config/SAMD21_WG_IOT/peripheral/nvmctrl/plib_nvmctrl.c  .generated_files/flags/SAMD21_WG_IOT/e4c1089e0966131e7a356d04a2c15cbdb2c2877d .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1194272987" 
 	@${RM} ${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o.d" -o ${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o ../src/config/SAMD21_WG_IOT/peripheral/nvmctrl/plib_nvmctrl.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/2124645644/plib_port.o: ../src/config/SAMD21_WG_IOT/peripheral/port/plib_port.c  .generated_files/flags/SAMD21_WG_IOT/bc64828c9cc434480e9f722feda7a6757f003d3 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/2124645644/plib_port.o: ../src/config/SAMD21_WG_IOT/peripheral/port/plib_port.c  .generated_files/flags/SAMD21_WG_IOT/768aecb1e6fc8d37b811b87edf37db7411f04c6e .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/2124645644" 
 	@${RM} ${OBJECTDIR}/_ext/2124645644/plib_port.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2124645644/plib_port.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/2124645644/plib_port.o.d" -o ${OBJECTDIR}/_ext/2124645644/plib_port.o ../src/config/SAMD21_WG_IOT/peripheral/port/plib_port.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o: ../src/config/SAMD21_WG_IOT/peripheral/rtc/plib_rtc_timer.c  .generated_files/flags/SAMD21_WG_IOT/e48c15f006bfd14575cebc6ed0285b1a559c130e .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o: ../src/config/SAMD21_WG_IOT/peripheral/rtc/plib_rtc_timer.c  .generated_files/flags/SAMD21_WG_IOT/fb2e2d14ec8811cd830febf82336590be245c237 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/485650314" 
 	@${RM} ${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o.d" -o ${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o ../src/config/SAMD21_WG_IOT/peripheral/rtc/plib_rtc_timer.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o: ../src/config/SAMD21_WG_IOT/peripheral/sercom/spi_master/plib_sercom0_spi_master.c  .generated_files/flags/SAMD21_WG_IOT/c873f09d631a4d9d866e6da5c05f20e59f58937d .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o: ../src/config/SAMD21_WG_IOT/peripheral/sercom/spi_master/plib_sercom0_spi_master.c  .generated_files/flags/SAMD21_WG_IOT/9106f0972ac2d9bb300d132a27abb0f7defcc68b .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/866752344" 
 	@${RM} ${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o.d 
 	@${RM} ${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o.d" -o ${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o ../src/config/SAMD21_WG_IOT/peripheral/sercom/spi_master/plib_sercom0_spi_master.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1812770719/xc32_monitor.o: ../src/config/SAMD21_WG_IOT/stdio/xc32_monitor.c  .generated_files/flags/SAMD21_WG_IOT/8902631200b95ef02e065ab47d6fcbd2d6f012f6 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1812770719/xc32_monitor.o: ../src/config/SAMD21_WG_IOT/stdio/xc32_monitor.c  .generated_files/flags/SAMD21_WG_IOT/193fdeb669fe97729221e13f6e922a9c5f4c2b98 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1812770719" 
 	@${RM} ${OBJECTDIR}/_ext/1812770719/xc32_monitor.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1812770719/xc32_monitor.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1812770719/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/1812770719/xc32_monitor.o ../src/config/SAMD21_WG_IOT/stdio/xc32_monitor.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/initialization.o: ../src/config/SAMD21_WG_IOT/initialization.c  .generated_files/flags/SAMD21_WG_IOT/abeaf35cfd69f0ad6651890f4155c8205d0c9692 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/initialization.o: ../src/config/SAMD21_WG_IOT/initialization.c  .generated_files/flags/SAMD21_WG_IOT/c11e538e84df8eea0ad7ab359caf11a4b9ef16bc .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/initialization.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/initialization.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/initialization.o.d" -o ${OBJECTDIR}/_ext/853479/initialization.o ../src/config/SAMD21_WG_IOT/initialization.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/interrupts.o: ../src/config/SAMD21_WG_IOT/interrupts.c  .generated_files/flags/SAMD21_WG_IOT/6fb98f7bfad5622a119ffee5ff008ccbc6fba554 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/interrupts.o: ../src/config/SAMD21_WG_IOT/interrupts.c  .generated_files/flags/SAMD21_WG_IOT/486980ee8552674a051a7827cf4105e290603758 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/interrupts.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/interrupts.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/interrupts.o.d" -o ${OBJECTDIR}/_ext/853479/interrupts.o ../src/config/SAMD21_WG_IOT/interrupts.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/exceptions.o: ../src/config/SAMD21_WG_IOT/exceptions.c  .generated_files/flags/SAMD21_WG_IOT/47b821c1e377faf6232968b126aeff4036476cb3 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/exceptions.o: ../src/config/SAMD21_WG_IOT/exceptions.c  .generated_files/flags/SAMD21_WG_IOT/74a320df7930c9f947eeec8e59ffbb15123c5f25 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/exceptions.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/exceptions.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/exceptions.o.d" -o ${OBJECTDIR}/_ext/853479/exceptions.o ../src/config/SAMD21_WG_IOT/exceptions.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/startup_xc32.o: ../src/config/SAMD21_WG_IOT/startup_xc32.c  .generated_files/flags/SAMD21_WG_IOT/7650349d2f52a696ce5f5dd1cc405fdbba8cb86e .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/startup_xc32.o: ../src/config/SAMD21_WG_IOT/startup_xc32.c  .generated_files/flags/SAMD21_WG_IOT/b5a8d03b45a7ad1b7b079043c218f2dca5cb939f .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/startup_xc32.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/startup_xc32.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/startup_xc32.o.d" -o ${OBJECTDIR}/_ext/853479/startup_xc32.o ../src/config/SAMD21_WG_IOT/startup_xc32.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/libc_syscalls.o: ../src/config/SAMD21_WG_IOT/libc_syscalls.c  .generated_files/flags/SAMD21_WG_IOT/d50ef2b3b40b94e386140d9cb29c66a835630174 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/libc_syscalls.o: ../src/config/SAMD21_WG_IOT/libc_syscalls.c  .generated_files/flags/SAMD21_WG_IOT/a1752065d54510c3b4919f8f1b5932e2dcdd9021 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/libc_syscalls.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/libc_syscalls.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/libc_syscalls.o.d" -o ${OBJECTDIR}/_ext/853479/libc_syscalls.o ../src/config/SAMD21_WG_IOT/libc_syscalls.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/SAMD21_WG_IOT/464de4a5194a81be91b8c35e553493e5105af152 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/SAMD21_WG_IOT/47e049f29c04c27c9c161fa5a5ac4673f091cf9e .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG   -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
 else
-${OBJECTDIR}/_ext/1427407075/plib_clock.o: ../src/config/SAMD21_WG_IOT/peripheral/clock/plib_clock.c  .generated_files/flags/SAMD21_WG_IOT/64a6a9537cf54b4f77fd0ede5f0c44194b4c65f0 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1427407075/plib_clock.o: ../src/config/SAMD21_WG_IOT/peripheral/clock/plib_clock.c  .generated_files/flags/SAMD21_WG_IOT/2740b6ad1a2355028edb79435eaf6e5208cabd0f .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1427407075" 
 	@${RM} ${OBJECTDIR}/_ext/1427407075/plib_clock.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1427407075/plib_clock.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1427407075/plib_clock.o.d" -o ${OBJECTDIR}/_ext/1427407075/plib_clock.o ../src/config/SAMD21_WG_IOT/peripheral/clock/plib_clock.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/485663148/plib_eic.o: ../src/config/SAMD21_WG_IOT/peripheral/eic/plib_eic.c  .generated_files/flags/SAMD21_WG_IOT/cbf9f90c6b2b43b8be4807b2021e19d5ee96b740 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/485663148/plib_eic.o: ../src/config/SAMD21_WG_IOT/peripheral/eic/plib_eic.c  .generated_files/flags/SAMD21_WG_IOT/6c0e4eadeff4735d87cfd4ad7219fcbf64def15c .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/485663148" 
 	@${RM} ${OBJECTDIR}/_ext/485663148/plib_eic.o.d 
 	@${RM} ${OBJECTDIR}/_ext/485663148/plib_eic.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/485663148/plib_eic.o.d" -o ${OBJECTDIR}/_ext/485663148/plib_eic.o ../src/config/SAMD21_WG_IOT/peripheral/eic/plib_eic.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1429556561/plib_evsys.o: ../src/config/SAMD21_WG_IOT/peripheral/evsys/plib_evsys.c  .generated_files/flags/SAMD21_WG_IOT/7eef98f2ee3dc904a5edbf667480fa5ff9ea3ecd .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1429556561/plib_evsys.o: ../src/config/SAMD21_WG_IOT/peripheral/evsys/plib_evsys.c  .generated_files/flags/SAMD21_WG_IOT/df41f17dc24fb5310551f51a6a12d92d4587f008 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1429556561" 
 	@${RM} ${OBJECTDIR}/_ext/1429556561/plib_evsys.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1429556561/plib_evsys.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1429556561/plib_evsys.o.d" -o ${OBJECTDIR}/_ext/1429556561/plib_evsys.o ../src/config/SAMD21_WG_IOT/peripheral/evsys/plib_evsys.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/2124592493/plib_nvic.o: ../src/config/SAMD21_WG_IOT/peripheral/nvic/plib_nvic.c  .generated_files/flags/SAMD21_WG_IOT/1361710fcbc170bd6668e8476e4f28f314321076 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/2124592493/plib_nvic.o: ../src/config/SAMD21_WG_IOT/peripheral/nvic/plib_nvic.c  .generated_files/flags/SAMD21_WG_IOT/9f76ceb678a1ae8aa49305a709510676a84e1061 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/2124592493" 
 	@${RM} ${OBJECTDIR}/_ext/2124592493/plib_nvic.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2124592493/plib_nvic.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/2124592493/plib_nvic.o.d" -o ${OBJECTDIR}/_ext/2124592493/plib_nvic.o ../src/config/SAMD21_WG_IOT/peripheral/nvic/plib_nvic.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o: ../src/config/SAMD21_WG_IOT/peripheral/nvmctrl/plib_nvmctrl.c  .generated_files/flags/SAMD21_WG_IOT/1c8faeaa5be6dad4d79f9f2de83cf54d430dd7c7 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o: ../src/config/SAMD21_WG_IOT/peripheral/nvmctrl/plib_nvmctrl.c  .generated_files/flags/SAMD21_WG_IOT/f9e29fc5e4d5aa2776ee1ec6b0dd0bd2d1edf6be .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1194272987" 
 	@${RM} ${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o.d" -o ${OBJECTDIR}/_ext/1194272987/plib_nvmctrl.o ../src/config/SAMD21_WG_IOT/peripheral/nvmctrl/plib_nvmctrl.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/2124645644/plib_port.o: ../src/config/SAMD21_WG_IOT/peripheral/port/plib_port.c  .generated_files/flags/SAMD21_WG_IOT/b0b07c8281167ce2ac1fa6c554fcd0e01b4ee65a .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/2124645644/plib_port.o: ../src/config/SAMD21_WG_IOT/peripheral/port/plib_port.c  .generated_files/flags/SAMD21_WG_IOT/65bf1cebb37bb58e8fa13d1f9eb3e13f2e959364 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/2124645644" 
 	@${RM} ${OBJECTDIR}/_ext/2124645644/plib_port.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2124645644/plib_port.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/2124645644/plib_port.o.d" -o ${OBJECTDIR}/_ext/2124645644/plib_port.o ../src/config/SAMD21_WG_IOT/peripheral/port/plib_port.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o: ../src/config/SAMD21_WG_IOT/peripheral/rtc/plib_rtc_timer.c  .generated_files/flags/SAMD21_WG_IOT/8e9d589f6957fdbb4a80519ce9540c3bf68fa8e1 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o: ../src/config/SAMD21_WG_IOT/peripheral/rtc/plib_rtc_timer.c  .generated_files/flags/SAMD21_WG_IOT/6d51d45a783935d321ca6bfaf5dc318202acf7c6 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/485650314" 
 	@${RM} ${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o.d 
 	@${RM} ${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o.d" -o ${OBJECTDIR}/_ext/485650314/plib_rtc_timer.o ../src/config/SAMD21_WG_IOT/peripheral/rtc/plib_rtc_timer.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o: ../src/config/SAMD21_WG_IOT/peripheral/sercom/spi_master/plib_sercom0_spi_master.c  .generated_files/flags/SAMD21_WG_IOT/341e90df569c115b2ee0d5a5f3767302c0937972 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o: ../src/config/SAMD21_WG_IOT/peripheral/sercom/spi_master/plib_sercom0_spi_master.c  .generated_files/flags/SAMD21_WG_IOT/4857c084851e6afc8b8f9587fc7de84b4416198f .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/866752344" 
 	@${RM} ${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o.d 
 	@${RM} ${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o.d" -o ${OBJECTDIR}/_ext/866752344/plib_sercom0_spi_master.o ../src/config/SAMD21_WG_IOT/peripheral/sercom/spi_master/plib_sercom0_spi_master.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1812770719/xc32_monitor.o: ../src/config/SAMD21_WG_IOT/stdio/xc32_monitor.c  .generated_files/flags/SAMD21_WG_IOT/789339f860dd31968a3d12f433d70968367d79dc .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1812770719/xc32_monitor.o: ../src/config/SAMD21_WG_IOT/stdio/xc32_monitor.c  .generated_files/flags/SAMD21_WG_IOT/22c542dc5efdcb59af047acfeadd9aa18d5c7911 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1812770719" 
 	@${RM} ${OBJECTDIR}/_ext/1812770719/xc32_monitor.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1812770719/xc32_monitor.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/1812770719/xc32_monitor.o.d" -o ${OBJECTDIR}/_ext/1812770719/xc32_monitor.o ../src/config/SAMD21_WG_IOT/stdio/xc32_monitor.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/initialization.o: ../src/config/SAMD21_WG_IOT/initialization.c  .generated_files/flags/SAMD21_WG_IOT/398dbaf5ebb14b450606dfee82d605ed4358e9ef .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/initialization.o: ../src/config/SAMD21_WG_IOT/initialization.c  .generated_files/flags/SAMD21_WG_IOT/78a4878638eb29d9fb81638a4e21b50d51daaa87 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/initialization.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/initialization.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/initialization.o.d" -o ${OBJECTDIR}/_ext/853479/initialization.o ../src/config/SAMD21_WG_IOT/initialization.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/interrupts.o: ../src/config/SAMD21_WG_IOT/interrupts.c  .generated_files/flags/SAMD21_WG_IOT/4ca4bb6dd97e4bf111fde3875517123909811ef8 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/interrupts.o: ../src/config/SAMD21_WG_IOT/interrupts.c  .generated_files/flags/SAMD21_WG_IOT/a549ebee0670dc81add633403f0ba7fb821c873c .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/interrupts.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/interrupts.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/interrupts.o.d" -o ${OBJECTDIR}/_ext/853479/interrupts.o ../src/config/SAMD21_WG_IOT/interrupts.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/exceptions.o: ../src/config/SAMD21_WG_IOT/exceptions.c  .generated_files/flags/SAMD21_WG_IOT/72bde66a2358a21966b5d40981c08e0dd1a6de77 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/exceptions.o: ../src/config/SAMD21_WG_IOT/exceptions.c  .generated_files/flags/SAMD21_WG_IOT/cfcad13ac699e3857487e66bd7af0d4930751be6 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/exceptions.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/exceptions.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/exceptions.o.d" -o ${OBJECTDIR}/_ext/853479/exceptions.o ../src/config/SAMD21_WG_IOT/exceptions.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/startup_xc32.o: ../src/config/SAMD21_WG_IOT/startup_xc32.c  .generated_files/flags/SAMD21_WG_IOT/d8d7a13b9b651701cc9ec1237d46f7b2fa9b4c6e .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/startup_xc32.o: ../src/config/SAMD21_WG_IOT/startup_xc32.c  .generated_files/flags/SAMD21_WG_IOT/d2b9ecb1bbc16cdef452183c4768317234dac3d1 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/startup_xc32.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/startup_xc32.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/startup_xc32.o.d" -o ${OBJECTDIR}/_ext/853479/startup_xc32.o ../src/config/SAMD21_WG_IOT/startup_xc32.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/853479/libc_syscalls.o: ../src/config/SAMD21_WG_IOT/libc_syscalls.c  .generated_files/flags/SAMD21_WG_IOT/bdb73ce2f8482002d036fcb742ff9035f95dc8e9 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/853479/libc_syscalls.o: ../src/config/SAMD21_WG_IOT/libc_syscalls.c  .generated_files/flags/SAMD21_WG_IOT/9f85c95946f57a35398d0fd43450365757070783 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/853479" 
 	@${RM} ${OBJECTDIR}/_ext/853479/libc_syscalls.o.d 
 	@${RM} ${OBJECTDIR}/_ext/853479/libc_syscalls.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -fdata-sections -O1 -fno-common -I"../src" -I"../src/config/SAMD21_WG_IOT" -I"../src/packs/ATSAMD21G18A_DFP" -I"../src/packs/CMSIS/CMSIS/Core/Include" -I"../src/packs/CMSIS/" -Werror -Wall -MP -MMD -MF "${OBJECTDIR}/_ext/853479/libc_syscalls.o.d" -o ${OBJECTDIR}/_ext/853479/libc_syscalls.o ../src/config/SAMD21_WG_IOT/libc_syscalls.c    -DXPRJ_SAMD21_WG_IOT=$(CND_CONF)    $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}/samd21a" ${PACK_COMMON_OPTIONS} 
 	
-${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/SAMD21_WG_IOT/1cd28cf4522b74c2ff74a429e1fae622ef76bc34 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
+${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  .generated_files/flags/SAMD21_WG_IOT/81771021dc7378cdcb82ec8a4e5fa11f387e0830 .generated_files/flags/SAMD21_WG_IOT/854658b06fdb7ba420d71d72fc8f7d446981ac34
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
