@@ -83,13 +83,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 34690275A1F2E01D66BA736C50BBBDE2
-- generatedChecksum: 3A36485A72769FD607F877A2E647A3B1
+- generatedChecksum: 33480FF33E811B9364D2E44C29274D86
   logicalPath: config/SAMD21_WG_IOT/peripheral/sercom/spi_master
   name: plib_sercom0_spi_master.c
   physicalPath: peripheral/sercom/spi_master
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 3A36485A72769FD607F877A2E647A3B1
+  userChecksum: 33480FF33E811B9364D2E44C29274D86
 - generatedChecksum: 949BBD944EC8B81E639121B72E7C7510
   logicalPath: config/SAMD21_WG_IOT
   name: startup_xc32.c

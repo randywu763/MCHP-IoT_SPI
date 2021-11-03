@@ -42,6 +42,19 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
+      <logicalFolder name="f1" displayName="SAMD21_WG_IOT.mhc" projectFiles="true">
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/core.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/cmsis.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/project.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/dfp.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/rtc.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/evsys.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/nvmctrl.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/settings.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/sercom0.yml</itemPath>
+        <itemPath>../SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/SAMD21_WG_IOT.mhc/eic.yml</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>PIC-IoT_SPI-Master.mc3</itemPath>
     </logicalFolder>

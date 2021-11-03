@@ -50,7 +50,6 @@
 #include "mcc_generated_files/system.h"
 #include "mcc_generated_files/tmr1.h"
 #include <stdbool.h>
-#include <string.h>
 
 #define COMMAND_NUMBYTES 1
 #define INDEX_NUMBYTES 1

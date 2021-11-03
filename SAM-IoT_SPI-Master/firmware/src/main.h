@@ -25,7 +25,6 @@
 #include <stddef.h>                     // Defines NULL
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
-#include <string.h>                     // Defines memcpy()
 #include "definitions.h"                // SYS function prototypes
 
 #define COMMAND_NUMBYTES 1
@@ -33,8 +32,10 @@
 #define LENGTH_NUMBYTES 2
 #define HEADER_NUMBYTES (COMMAND_NUMBYTES+INDEX_NUMBYTES+LENGTH_NUMBYTES)
 #define PAYLOAD_NUMBYTES 1024
-#define TXBUFF_NUMBYTES (HEADER_NUMBYTES+PAYLOAD_NUMBYTES+1)
-#define DATAFRAMES_TOTAL2SEND 1
+#define TXBUFF_NUMBYTES (COMMAND_NUMBYTES+INDEX_NUMBYTES+LENGTH_NUMBYTES+PAYLOAD_NUMBYTES)
+#define RXBUFF_NUMBYTES TXBUFF_NUMBYTES
+#define DATAFRAMES_TOTAL2SEND_SW0 1
+#define DATAFRAMES_TOTAL2SEND_SW1 8
 #define CMD_STR_INDEX_MIN 11
 #define CMD_STR_INDEX_MAX 14
 

@@ -33,22 +33,6 @@ size_t   APP_txBufSize = TXBUFF_NUMBYTES;
 uint8_t  APP_dataFrameIndex = CMD_STR_INDEX_MIN;
 uint16_t APP_dataFramesSent = 0;
 
-//static char APP_telemetry_512b[] =
-//"\"start--$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-//"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-//"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-//"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef$--end\"";
-
-static char APP_telemetry_1024b[] =
-"\"start--$0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-"0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef$--end\"";
-
 void APP_SPITransferHandler(uintptr_t context)
 {
     //Transfer was completed without error, do something else now.
@@ -56,12 +40,24 @@ void APP_SPITransferHandler(uintptr_t context)
 
 void APP_prepareDataFrame(uint8_t index)
 {
+    uint16_t counter;
+    
     APP_txBuffer[0] = 't';
     APP_txBuffer[1] = index;
     APP_txBuffer[2] = ((PAYLOAD_NUMBYTES >> 8) & 0x00FF);
     APP_txBuffer[3] = (PAYLOAD_NUMBYTES & 0x00FF);
-    //memcpy(&APP_txBuffer[HEADER_NUMBYTES], APP_telemetry_512b, sizeof(APP_telemetry_512b));
-    memcpy(&APP_txBuffer[HEADER_NUMBYTES], APP_telemetry_1024b, sizeof(APP_telemetry_1024b));
+    for (counter = HEADER_NUMBYTES; counter < (HEADER_NUMBYTES+PAYLOAD_NUMBYTES); counter++)
+    {
+        APP_txBuffer[counter] = index + 38;
+    }
+    APP_txBuffer[HEADER_NUMBYTES+0] = 'S';
+    APP_txBuffer[HEADER_NUMBYTES+1] = 'T';
+    APP_txBuffer[HEADER_NUMBYTES+2] = 'A';
+    APP_txBuffer[HEADER_NUMBYTES+3] = 'R';
+    APP_txBuffer[HEADER_NUMBYTES+4] = 'T';
+    APP_txBuffer[TXBUFF_NUMBYTES-3] = 'E';
+    APP_txBuffer[TXBUFF_NUMBYTES-2] = 'N';
+    APP_txBuffer[TXBUFF_NUMBYTES-1] = 'D';   
 }
 
 void APP_sendDataFrame(void)
@@ -134,7 +130,7 @@ int main ( void )
         SYS_Tasks ( );
         if (SW0_buttonPressed == true)
         {
-            while (APP_dataFramesSent < DATAFRAMES_TOTAL2SEND)
+            while (APP_dataFramesSent < DATAFRAMES_TOTAL2SEND_SW0)
             {
                 if (isRTCTimerExpired == true)
                 {
@@ -151,6 +147,26 @@ int main ( void )
             }
             APP_dataFramesSent = 0;
             SW0_buttonPressed = false;
+        }
+       if (SW1_buttonPressed == true)
+        {
+            while (APP_dataFramesSent < DATAFRAMES_TOTAL2SEND_SW1)
+            {
+                if (isRTCTimerExpired == true)
+                {
+                    isRTCTimerExpired = false;
+                    APP_sendDataFrame();
+                    APP_dataFramesSent++;
+                    APP_dataFrameIndex++;
+                    if (APP_dataFrameIndex > CMD_STR_INDEX_MAX)
+                    {
+                        APP_dataFrameIndex = CMD_STR_INDEX_MIN;    
+                    }
+                    LED_RED_Toggle();
+                }
+            }
+            APP_dataFramesSent = 0;
+            SW1_buttonPressed = false;
         }
     }
 

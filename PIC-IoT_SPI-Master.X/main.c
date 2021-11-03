@@ -64,6 +64,7 @@ void APP_prepareDataFrame(uint8_t index)
     APP_txBuffer[0] = 't';
     APP_txBuffer[1] = index;
     APP_txBuffer[2] = ((PAYLOAD_NUMBYTES >> 8) & 0x00FF);
+    APP_txBuffer[3] = (PAYLOAD_NUMBYTES & 0x00FF);
     for (counter = HEADER_NUMBYTES; counter < (HEADER_NUMBYTES+PAYLOAD_NUMBYTES); counter++)
     {
         APP_txBuffer[counter] = index + 38;
