@@ -42,26 +42,34 @@
     TERMS.
 */
 
-/**
-  Section: Included Files
-*/
-#include "mcc_generated_files/pin_manager.h"
-#include "mcc_generated_files/spi2.h"
-#include "mcc_generated_files/system.h"
-#include "mcc_generated_files/tmr1.h"
-#include <stdbool.h>
-
 #define COMMAND_NUMBYTES 1
 #define INDEX_NUMBYTES 1
 #define LENGTH_NUMBYTES 2
-#define HEADER_NUMBYTES (COMMAND_NUMBYTES+INDEX_NUMBYTES+LENGTH_NUMBYTES)
+#define HEADER_NUMBYTES (COMMAND_NUMBYTES + INDEX_NUMBYTES + LENGTH_NUMBYTES)
 #define PAYLOAD_NUMBYTES 1024
-#define TXBUFF_NUMBYTES (COMMAND_NUMBYTES+INDEX_NUMBYTES+LENGTH_NUMBYTES+PAYLOAD_NUMBYTES)
-#define RXBUFF_NUMBYTES TXBUFF_NUMBYTES
+#define TXBUFFSIZE_NUMBYTES (COMMAND_NUMBYTES + INDEX_NUMBYTES + LENGTH_NUMBYTES + PAYLOAD_NUMBYTES)
+#define RXBUFFSIZE_NUMBYTES TXBUFFSIZE_NUMBYTES
 #define DATAFRAMES_TOTAL2SEND_SW0 1
 #define DATAFRAMES_TOTAL2SEND_SW1 8
-#define CMD_STR_INDEX_MIN 11
-#define CMD_STR_INDEX_MAX 14
+#define CMD_CHAR_SW0 'T'
+#define CMD_CHAR_SW1 't'
+#define INDEX_VAL_INT_1  1
+#define INDEX_VAL_INT_2  2
+#define INDEX_VAL_INT_3  3
+#define INDEX_VAL_INT_4  4
+#define INDEX_VAL_DBL_1  5
+#define INDEX_VAL_DBL_2  6
+#define INDEX_VAL_FLT_1  7
+#define INDEX_VAL_FLT_2  8
+#define INDEX_VAL_LNG    9
+#define INDEX_VAL_BOOL  10
+#define INDEX_VAL_STR_1 11
+#define INDEX_VAL_STR_2 12
+#define INDEX_VAL_STR_3 13
+#define INDEX_VAL_STR_4 14
+#define CMD_INDEX_MIN_SW0 INDEX_VAL_INT_1
+#define CMD_INDEX_MIN_SW1 INDEX_VAL_STR_1
+#define CMD_INDEX_MAX INDEX_VAL_STR_4
 
 /**
  End of File

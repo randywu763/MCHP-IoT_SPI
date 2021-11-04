@@ -4,6 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/c14166/GitHub%20Repositories/MCHP-IoT_SPI/SAM-IoT_SPI-Master/firmware/src/main.c</file>
+            <file>file:/Users/c14166/GitHub%20Repositories/MCHP-IoT_SPI/SAM-IoT_SPI-Master/firmware/src/config/SAMD21_WG_IOT/peripheral/clock/plib_clock.c</file>
         </group>
     </open-files>
 </project-private>

@@ -1,15 +1,11 @@
 /**
   Generated main.c file from MPLAB Code Configurator
-
   @Company
     Microchip Technology Inc.
-
   @File Name
     main.c
-
   @Summary
     This is the generated main.c using PIC24 / dsPIC33 / PIC32MM MCUs.
-
   @Description
     This source file provides main entry point for system initialization and application code development.
     Generation Information :
@@ -23,13 +19,11 @@
 /*
     (c) 2020 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
-
     THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
     EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
     WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
     PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION
     WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION.
-
     IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
     INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
     WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
@@ -37,7 +31,6 @@
     FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
     ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
     THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
 */
@@ -45,68 +38,49 @@
 /**
   Section: Included Files
 */
-#include "mcc_generated_files/pin_manager.h"
-#include "mcc_generated_files/spi2.h"
-#include "mcc_generated_files/system.h"
-#include "mcc_generated_files/tmr1.h"
 #include "main.h"
 
 static volatile bool SW0_buttonPressed = false;
 static volatile bool SW1_buttonPressed = false;
 static volatile bool isTMR1TimerExpired = false;
-
-const uint16_t PAYLOAD_length[CMD_INDEX_MAX] = {4,4,4,4,8,8,4,4,8,4,128,256,512,1024};
-
-uint8_t  APP_txBuffer[TXBUFFSIZE_NUMBYTES];
-size_t   APP_txBufSize = TXBUFFSIZE_NUMBYTES;
-uint8_t  APP_rxBuffer[RXBUFFSIZE_NUMBYTES];
-size_t   APP_rxBufSize = RXBUFFSIZE_NUMBYTES;
-
-uint8_t  SW0_dataFrameIndex = CMD_INDEX_MIN_SW0;
-uint8_t  SW1_dataFrameIndex = CMD_INDEX_MIN_SW1;
-char     SW0_commandChar = CMD_CHAR_SW0;
-char     SW1_commandChar = CMD_CHAR_SW1;
+uint8_t  APP_txBuffer[TXBUFF_NUMBYTES];
+size_t   APP_txBufSize = TXBUFF_NUMBYTES;
+uint8_t  APP_rxBuffer[RXBUFF_NUMBYTES];
+size_t   APP_rxBufSize = RXBUFF_NUMBYTES;
+uint8_t  APP_dataFrameIndex = CMD_STR_INDEX_MIN;
 uint16_t APP_dataFramesSent = 0;
 
-void APP_prepareDataFrame(uint8_t command, uint8_t index, uint16_t payloadLen)
+void APP_prepareDataFrame(uint8_t index)
 {
     uint16_t counter;
     
-    APP_txBuffer[0] = command;
+    APP_txBuffer[0] = 't';
     APP_txBuffer[1] = index;
-    APP_txBuffer[2] = ((payloadLen >> 8) & 0x00FF);
-    APP_txBuffer[3] = ((payloadLen >> 0) & 0x00FF);
-    for (counter = HEADER_NUMBYTES; counter < (HEADER_NUMBYTES + PAYLOAD_NUMBYTES); counter++)
+    APP_txBuffer[2] = ((PAYLOAD_NUMBYTES >> 8) & 0x00FF);
+    APP_txBuffer[3] = (PAYLOAD_NUMBYTES & 0x00FF);
+    for (counter = HEADER_NUMBYTES; counter < (HEADER_NUMBYTES+PAYLOAD_NUMBYTES); counter++)
     {
-        APP_txBuffer[counter] = (index + 38);
+        APP_txBuffer[counter] = index + 38;
     }
-    APP_txBuffer[HEADER_NUMBYTES + 0] = 'S';
-    APP_txBuffer[HEADER_NUMBYTES + 1] = 'T';
-    APP_txBuffer[HEADER_NUMBYTES + 2] = 'A';
-    APP_txBuffer[HEADER_NUMBYTES + 3] = 'R';
-    APP_txBuffer[HEADER_NUMBYTES + 4] = 'T';
-    if (index == INDEX_VAL_BOOL)
-    {
-        APP_txBuffer[HEADER_NUMBYTES + 0] = 't';
-        APP_txBuffer[HEADER_NUMBYTES + 1] = 'r';
-        APP_txBuffer[HEADER_NUMBYTES + 2] = 'u';
-        APP_txBuffer[HEADER_NUMBYTES + 3] = 'e';
-        APP_txBuffer[HEADER_NUMBYTES + 4] = (index + 38);
-    }
-    APP_txBuffer[TXBUFFSIZE_NUMBYTES - 3] = 'E';
-    APP_txBuffer[TXBUFFSIZE_NUMBYTES - 2] = 'N';
-    APP_txBuffer[TXBUFFSIZE_NUMBYTES - 1] = 'D';    
+    APP_txBuffer[HEADER_NUMBYTES+0] = 'S';
+    APP_txBuffer[HEADER_NUMBYTES+1] = 'T';
+    APP_txBuffer[HEADER_NUMBYTES+2] = 'A';
+    APP_txBuffer[HEADER_NUMBYTES+3] = 'R';
+    APP_txBuffer[HEADER_NUMBYTES+4] = 'T';
+    APP_txBuffer[TXBUFF_NUMBYTES-3] = 'E';
+    APP_txBuffer[TXBUFF_NUMBYTES-2] = 'N';
+    APP_txBuffer[TXBUFF_NUMBYTES-1] = 'D';    
 }
 
-void APP_sendDataFrame(uint8_t command, uint8_t index, uint16_t payloadLen)
+void APP_sendDataFrame(void)
 {
     uint16_t total = 0;
 
-    APP_prepareDataFrame(command, index, payloadLen);
+    APP_prepareDataFrame(APP_dataFrameIndex);
     do
     {
-        total = SPI2_Exchange8bitBuffer( &APP_txBuffer[total], ((HEADER_NUMBYTES+payloadLen) - total), &APP_rxBuffer[total]);
-    } while(total < (HEADER_NUMBYTES + payloadLen));
+        total = SPI2_Exchange8bitBuffer( &APP_txBuffer[total], (TXBUFF_NUMBYTES - total), &APP_rxBuffer[total]);
+    } while(total < TXBUFF_NUMBYTES);
 }
 
 static void SW0_interruptHandler(void)
@@ -158,12 +132,12 @@ int main(void)
                 if (isTMR1TimerExpired == true)
                 {
                     isTMR1TimerExpired = false;
-                    APP_sendDataFrame(SW0_commandChar, SW0_dataFrameIndex, PAYLOAD_length[SW0_dataFrameIndex - 1]);
+                    APP_sendDataFrame();
                     APP_dataFramesSent++;
-                    SW0_dataFrameIndex++;
-                    if (SW0_dataFrameIndex > CMD_INDEX_MAX)
+                    APP_dataFrameIndex++;
+                    if (APP_dataFrameIndex > CMD_STR_INDEX_MAX)
                     {
-                        SW0_dataFrameIndex = CMD_INDEX_MIN_SW0;    
+                        APP_dataFrameIndex = CMD_STR_INDEX_MIN;    
                     }
                     LED_RED_Toggle();
                 }
@@ -178,12 +152,12 @@ int main(void)
                 if (isTMR1TimerExpired == true)
                 {
                     isTMR1TimerExpired = false;
-                    APP_sendDataFrame(SW1_commandChar, SW1_dataFrameIndex, PAYLOAD_length[SW1_dataFrameIndex - 1]);
+                    APP_sendDataFrame();
                     APP_dataFramesSent++;
-                    SW1_dataFrameIndex++;
-                    if (SW1_dataFrameIndex > CMD_INDEX_MAX)
+                    APP_dataFrameIndex++;
+                    if (APP_dataFrameIndex > CMD_STR_INDEX_MAX)
                     {
-                        SW1_dataFrameIndex = CMD_INDEX_MIN_SW1;    
+                        APP_dataFrameIndex = CMD_STR_INDEX_MIN;    
                     }
                     LED_RED_Toggle();
                 }

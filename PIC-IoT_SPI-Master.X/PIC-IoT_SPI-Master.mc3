@@ -8829,11 +8829,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="actualPeriod"/>
-         <value>0.150016</value>
+         <value>0.500032</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="callBackRate"/>
-         <value>0.150016</value>
+         <value>0.500032</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="clockSourceSelect"/>
@@ -8845,11 +8845,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="customPR"/>
-         <value>2343</value>
+         <value>7812</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="inputMode"/>
-         <value>customTmrMode</value>
+         <value>periodMode</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="localClockFreq"/>
@@ -8873,7 +8873,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="requestedPeriod"/>
-         <value>0.15</value>
+         <value>0.5</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="tickerFactor"/>
@@ -8965,7 +8965,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="TMR1" registerAlias="PR"/>
-         <value>2343</value>
+         <value>7812</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="TMR1" registerAlias="TCON"/>
@@ -8977,7 +8977,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR1" registerAlias="PR" settingAlias="PR"/>
-         <value>2343</value>
+         <value>7812</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR1" registerAlias="TCON" settingAlias="TCKPS"/>
@@ -9063,15 +9063,15 @@
       </entry>
       <entry>
          <file>mcc_generated_files/tmr1.c</file>
-         <hash>309fdd4f3ece4e11c76b2f465403e78c047ef1d6ca7351a4dd5b5bc64292562c</hash>
-      </entry>
-      <entry>
-         <file>main.c</file>
-         <hash>fa14f2c1f033d4469b415f6541671f66f9647779a6074e70ee449d70e42e76e5</hash>
+         <hash>237e3a4408d13741adba0912383fe852580a132f06ee5815bf5ab30a5dd20c31</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/system.c</file>
          <hash>44035f3bc03bdd363b1f1b86fb7d8374057af92c9a7945ee66373e14753b56f4</hash>
+      </entry>
+      <entry>
+         <file>main.c</file>
+         <hash>fa14f2c1f033d4469b415f6541671f66f9647779a6074e70ee449d70e42e76e5</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr1.h</file>
