@@ -373,7 +373,7 @@
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="/Users/c14166/GitHub Repositories/MCHP-IoT_SPI/PIC-IoT_SPI-Master.X/debug/PIC24_IOT_WG/PIC-IoT_SPI-Master_ptg"/>
+                  value="/Users/c14166/Azure/PIC-IoT_SPI-Master.X/debug/default/PIC-IoT_SPI-Master_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

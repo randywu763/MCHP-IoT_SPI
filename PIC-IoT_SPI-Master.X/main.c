@@ -55,7 +55,7 @@ static volatile bool SW0_buttonPressed = false;
 static volatile bool SW1_buttonPressed = false;
 static volatile bool isTMR1TimerExpired = false;
 
-const uint16_t PAYLOAD_length[CMD_INDEX_MAX] = {4,4,4,4,8,8,4,4,8,4,128,256,512,1024};
+const uint16_t PAYLOAD_length[CMD_INDEX_MAX] = {4,4,4,4,8,8,4,4,8,4,1024,1024,1024,1024};
 
 uint8_t  APP_txBuffer[TXBUFFSIZE_NUMBYTES];
 size_t   APP_txBufSize = TXBUFFSIZE_NUMBYTES;
@@ -93,9 +93,9 @@ void APP_prepareDataFrame(uint8_t command, uint8_t index, uint16_t payloadLen)
         APP_txBuffer[HEADER_NUMBYTES + 3] = 'e';
         APP_txBuffer[HEADER_NUMBYTES + 4] = (index + 38);
     }
-    APP_txBuffer[TXBUFFSIZE_NUMBYTES - 3] = 'E';
-    APP_txBuffer[TXBUFFSIZE_NUMBYTES - 2] = 'N';
-    APP_txBuffer[TXBUFFSIZE_NUMBYTES - 1] = 'D';    
+    APP_txBuffer[(HEADER_NUMBYTES + payloadLen) - 3] = 'E';
+    APP_txBuffer[(HEADER_NUMBYTES + payloadLen) - 2] = 'N';
+    APP_txBuffer[(HEADER_NUMBYTES + payloadLen) - 1] = 'D';   
 }
 
 void APP_sendDataFrame(uint8_t command, uint8_t index, uint16_t payloadLen)
